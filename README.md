@@ -12,13 +12,13 @@
 		}
 	}
  ```
- * 第二步：Add the dependency  
+* 第二步：Add the dependency  
 ```xml
  	dependencies {
 	        compile 'com.github.loonggg:TextWrapView:v1.1'
 	}
  ```
- * 第三步：在xml布局文件中使用
+* 第三步：在xml布局文件中使用
  ```xml
      <ScrollView
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
             android:layout_marginTop="@dimen/activity_horizontal_margin" />
     </ScrollView>
  ```
- * 第四步：在java中使用，可以修改字体大小和字体颜色，方法如下：
+* 第四步：在java中使用，可以修改字体大小和字体颜色，方法如下：
 ```java
 TextWrapView twv = (TextWrapView) findViewById(R.id.twv);
 //Color.BLACK是字体颜色，14是字号大小
