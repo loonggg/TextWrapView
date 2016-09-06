@@ -9,8 +9,8 @@ import org.jsoup.nodes.Element;
 public class BlockquoteView extends ElementView {
 
 
-    public BlockquoteView(Context context, Element element) {
-        super(context, element);
+    public BlockquoteView(Context context, Element element,int color,int size) {
+        super(context, element,color,size);
     }
 
     public BlockquoteView(Context context, AttributeSet attrs, Element element) {
@@ -18,7 +18,7 @@ public class BlockquoteView extends ElementView {
     }
 
     @Override
-    public void render() {
+    public void render(int color, int size) {
 
     }
 }

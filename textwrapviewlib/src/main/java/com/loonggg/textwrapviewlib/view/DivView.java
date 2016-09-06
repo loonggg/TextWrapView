@@ -11,8 +11,8 @@ import org.jsoup.nodes.Element;
 
 public class DivView extends ElementView {
 
-    public DivView(Context context, Element element) {
-        super(context, element);
+    public DivView(Context context, Element element, int color, int size) {
+        super(context, element, color, size);
     }
 
     public DivView(Context context, AttributeSet attrs, Element element) {
@@ -20,13 +20,13 @@ public class DivView extends ElementView {
     }
 
     @Override
-    public void render() {
+    public void render(int color, int size) {
         setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
         setOrientation(LinearLayout.VERTICAL);
 
         if (getElement() != null) {
             if (getElement().children().size() > 0) {
-                Utils.appendView(this, getElement().children());
+                Utils.appendView(this, getElement().children(),color,size);
             }
         }
     }

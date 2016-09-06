@@ -18,8 +18,8 @@ public class IFrameView extends ElementView {
 
     private static final String TAG = IFrameView.class.getSimpleName();
 
-    public IFrameView(Context context, Element element) {
-        super(context, element);
+    public IFrameView(Context context, Element element,int color,int size) {
+        super(context, element,color,size);
     }
 
     public IFrameView(Context context, AttributeSet attrs, Element element) {
@@ -27,7 +27,7 @@ public class IFrameView extends ElementView {
     }
 
     @Override
-    public void render() {
+    public void render(int color,int size) {
         Log.d(TAG, "I am IFrameView " + getLink());
         setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
         setPadding(0, 0, 0, Utils.dpToPx(this.getContext(), 16));

@@ -7,8 +7,8 @@ import org.jsoup.nodes.Element;
 
 
 public class HeaderView extends ElementView {
-    public HeaderView(Context context, Element element) {
-        super(context, element);
+    public HeaderView(Context context, Element element,int color,int size) {
+        super(context, element,color,size);
     }
 
     public HeaderView(Context context, AttributeSet attrs, Element element) {
@@ -16,7 +16,7 @@ public class HeaderView extends ElementView {
     }
 
     @Override
-    public void render() {
+    public void render(int color,int size) {
 
     }
 }

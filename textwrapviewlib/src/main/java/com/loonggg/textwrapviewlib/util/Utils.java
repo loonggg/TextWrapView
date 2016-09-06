@@ -19,20 +19,20 @@ import org.jsoup.select.Elements;
 
 public class Utils {
 
-    public static void appendView(ElementView elementView, Elements elements) {
+    public static void appendView(ElementView elementView, Elements elements, int color, int size) {
         for (Element e : elements) {
             if (JsoupUtils.isBlockquote(e)) {
-                elementView.addView(new BlockquoteView(elementView.getContext(), e));
+                elementView.addView(new BlockquoteView(elementView.getContext(), e, color, size));
             } else if (JsoupUtils.isHeader(e)) {
-                elementView.addView(new HeaderView(elementView.getContext(), e));
+                elementView.addView(new HeaderView(elementView.getContext(), e, color, size));
             } else if (JsoupUtils.isIFrame(e)) {
-                elementView.addView(new IFrameView(elementView.getContext(), e));
+                elementView.addView(new IFrameView(elementView.getContext(), e, color, size));
             } else if (JsoupUtils.isParagraph(e)) {
-                elementView.addView(new ParagraphView(elementView.getContext(), e));
+                elementView.addView(new ParagraphView(elementView.getContext(), e, color, size));
             } else if (JsoupUtils.isImage(e)) {
-                elementView.addView(new ImageView(elementView.getContext(), e));
+                elementView.addView(new ImageView(elementView.getContext(), e, color, size));
             } else if (JsoupUtils.isDiv(e)) {
-                elementView.addView(new DivView(elementView.getContext(), e));
+                elementView.addView(new DivView(elementView.getContext(), e, color, size));
             } else {
 
             }

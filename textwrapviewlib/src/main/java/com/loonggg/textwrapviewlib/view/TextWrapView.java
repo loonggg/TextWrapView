@@ -12,9 +12,8 @@ import org.jsoup.nodes.Element;
 
 public class TextWrapView extends ElementView {
 
-
-    public TextWrapView(Context context) {
-        super(context, null);
+    public TextWrapView(Context context,int color,int size) {
+        super(context, null,color,size);
     }
 
     public TextWrapView(Context context, AttributeSet attrs) {
@@ -22,15 +21,15 @@ public class TextWrapView extends ElementView {
     }
 
     @Override
-    public void render() {
+    public void render(int color, int size) {
         setOrientation(VERTICAL);
     }
 
-    public void setText(String html) {
+    public void setText(String html,int color,int size) {
         Document document = Jsoup.parse(html);
         Element element = document.body();
         setElement(element);
-        Utils.appendView(this, getElement().children());
+        Utils.appendView(this, getElement().children(),color,size);
         invalidate();
     }
 

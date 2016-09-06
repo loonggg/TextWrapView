@@ -17,8 +17,8 @@ public class ImageView extends ElementView {
     private static final String TAG = ImageView.class.getSimpleName();
 
 
-    public ImageView(Context context, Element element) {
-        super(context, element);
+    public ImageView(Context context, Element element,int color,int size) {
+        super(context, element,color,size);
     }
 
     protected ImageView(Context context, AttributeSet attrs, Element element) {
@@ -26,7 +26,7 @@ public class ImageView extends ElementView {
     }
 
     @Override
-    public void render() {
+    public void render(int color, int size) {
         Log.d(TAG, "I am image view");
         setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
         android.widget.ImageView imageView = new android.widget.ImageView(getContext());
@@ -36,7 +36,6 @@ public class ImageView extends ElementView {
         Picasso.with(getContext()).load(url).error(R.drawable.image_placeholder_error).into(imageView);
         imageView.setAdjustViewBounds(true);
         addView(imageView);
-
     }
 
     public String getLink() {

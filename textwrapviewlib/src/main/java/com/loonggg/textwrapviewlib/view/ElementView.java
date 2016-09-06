@@ -1,6 +1,7 @@
 package com.loonggg.textwrapviewlib.view;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
 
@@ -11,16 +12,16 @@ public abstract class ElementView extends LinearLayout {
 
     private Element element;
 
-    protected ElementView(Context context, Element element) {
+    protected ElementView(Context context, Element element, int color, int size) {
         super(context);
         this.element = element;
-        render();
+        render(color, size);
     }
 
-    protected ElementView(Context context, AttributeSet attrs, Element element) {
+    protected ElementView(Context context, AttributeSet attrs,Element element) {
         super(context, attrs);
         this.element = element;
-        render();
+        render(Color.BLACK, 14);
     }
 
 
@@ -32,5 +33,5 @@ public abstract class ElementView extends LinearLayout {
         this.element = element;
     }
 
-    public abstract void render();
+    public abstract void render(int color, int size);
 }
