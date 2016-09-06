@@ -4,6 +4,7 @@
 
 #### 使用方法
 * 第一步： Add the JitPack repository to your build file 
+
  ```xml
  	allprojects {
 		repositories {
