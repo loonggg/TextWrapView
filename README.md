@@ -2,6 +2,9 @@
 
 这是一个图文混排的库，支持html标记语言的图文混排。
 
+#### demo效果图：
+![](https://raw.githubusercontent.com/loonggg/TextWrapView/master/image/ss.gif)
+
 #### 使用方法
 * 第一步： Add the JitPack repository to your build file 
 
